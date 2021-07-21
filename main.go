@@ -24,7 +24,7 @@ func main() {
 	for {
 		fmt.Print("kvstorage-cli> ")
 		inp, _ := reader.ReadString('\n')
-		inp = strings.Replace(inp, "\n", "", -1)
+		inp = strings.TrimSpace(strings.Replace(inp, "\n", "", -1))
 
 		command := strings.Split(inp, " ")
 
